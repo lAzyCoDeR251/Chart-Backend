@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/main.py"
+    }
+  ],
+  "env": {
+    "APP_MODULE": "main:app",
+    "VCAP_APP_PORT": "80",
+    "WORKERS": "1"
+  },
+  "scripts": {
+    "start": "uvicorn main:app --host 0.0.0.0 --port 80"
+  }
+}
