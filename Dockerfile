@@ -20,6 +20,13 @@ RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz \
 && cd .. \
 && pip install TA-Lib
 
+# Install dependencies for OpenCV
+RUN apt-get update && apt-get install -y \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    libgl1-mesa-glx
+
 # Install Uvicorn and FastAPI
 RUN pip install uvicorn fastapi
 
