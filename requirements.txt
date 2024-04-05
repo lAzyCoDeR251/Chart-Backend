@@ -2,6 +2,7 @@ fastapi
 uvicorn
 pydantic
 ultralytics
+dill
 Pillow
 python-multipart
 pandas
