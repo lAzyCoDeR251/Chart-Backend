@@ -1,3 +1,4 @@
+TA-Lib
 fastapi
 uvicorn
 pydantic
